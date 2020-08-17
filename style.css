@@ -1,0 +1,851 @@
+html{
+    font-size: 100%;
+    
+}
+body{
+    background-color: #f1c8c8;
+}
+button{
+    color: #130F40;
+}
+
+/*---------------------------------------------------ハンバーガーメニュー*/
+
+#nav-drawer {
+    position: relative;
+  }
+  
+  /*チェックボックス等は非表示に*/
+  .nav-unshown {
+    display:none;
+  }
+  
+  /*アイコンのスペース*/
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+  }
+  
+  /*ハンバーガーアイコンをCSSだけで表現*/
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 3px;/*線の太さ*/
+    width: 25px;/*長さ*/
+    border-radius: 3px;
+    background: #555;
+    display: block;
+    content: '';
+    cursor: pointer;
+    z-index: 13;
+  }
+  #nav-open span:before {
+    bottom: -8px;
+  }
+  #nav-open span:after {
+    bottom: -16px;
+  }
+  
+  /*閉じる用の薄黒カバー*/
+  #nav-close {
+    display: none;/*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;/*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+  
+  /*中身*/
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0vw;
+    z-index: 9999;/*最前面に*/
+    width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 30vw;/*最大幅（調整してください）*/
+    height: 100%;
+    background: #fff;/*背景色*/
+    transition: .3s ease-in-out;/*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(105%);/*左に隠しておく*/
+  }
+  
+  /*チェックが入ったらもろもろ表示*/
+  #nav-input:checked ~ #nav-close {
+    display: block;/*カバーを表示*/
+    opacity: .5;
+  }
+  
+  #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*中身を表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+
+/*---------------------------------------------------ハンバーガーメニュー*/
+
+
+
+
+
+/*ヘッダーCSS*/
+header{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 6vw;
+    background-color: #fadce1;
+}
+.header-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.header-logo{
+    margin-left: 25%;
+    margin-top: 2%;
+}
+.header-logo img{
+    width: 9vw;
+    color: #130F40;
+}
+nav button{
+    width: 17%;
+    padding-top: 7%;
+}
+nav button:hover{
+    color: #ff1ec7;
+}
+#home{
+    background-color: #fadce1;
+    border: none;
+    font-family: 'Lobster', cursive;
+    outline: none;
+    font-size: 2vw;
+    cursor: pointer;
+}
+#about{
+    background-color: #fadce1;
+    border: none;
+    font-family: 'Lobster', cursive;
+    outline: none;
+    font-size: 2vw;
+    cursor: pointer;
+}
+#news{
+    background-color: #fadce1;
+    border: none;
+    font-family: 'Lobster', cursive;
+    outline: none;
+    font-size: 2vw;
+    cursor: pointer;
+}
+#menu{
+    background-color:#fadce1;
+    border: none;
+    outline: none;
+    font-family: 'Lobster', cursive;
+    font-size: 2vw;
+    cursor: pointer;
+}
+#contact{
+    background-color: #fadce1;
+    border: none;
+    outline: none;
+    font-family: 'Lobster', cursive;
+    font-size: 2vw;
+    cursor: pointer;
+}
+.pre{
+    margin-left: 3%;
+    margin-top: 4%;
+    text-align: center;
+}
+.pre p{
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+/*ヘッダーCSS*/
+
+
+/*1セクション*/
+.top-container{
+    width: 100%;
+    position: relative;
+    height: 60vw;
+}
+.thema{
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    font-size: 11vw;
+    top: 20%;
+    left: 3.8%;
+    z-index: 2;
+    color: white;
+}
+.top-container video{
+    position: absolute;
+    width: 75%;
+    top: 16%;
+    left: 20%;
+}
+/*1セクション*/
+
+
+
+/*セクション２*/
+.second-w{
+    width: 100%;
+    height: 50vw;
+}
+.sec-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7vw;
+}
+.second-w h2{
+    font-family: 'Lobster', cursive;
+    letter-spacing: 0.4vw;
+    font-size: 3.5vw;
+    color: white;
+    margin-top: 12vw;
+    margin-left: 23vw;
+}
+.hand{
+    font-family: "Hannari";
+    font-size: 4vw;
+    color: white;
+    margin-left: 4%;
+}
+
+.img-w{
+    position: relative;
+    width: 50%;
+}
+.red{
+    position: absolute;
+    z-index:2;
+    left: 5vw;
+    width: 98%;
+}
+.sebas{
+    position: absolute;
+    top: 15vw;
+    left: 22vw;
+    z-index: 1;
+    width: 98%;
+}
+.text-right{
+    width: 46vw;
+}
+.text-right p{
+    font-family: "Hannari";
+    font-size: 1.5vw;
+    color: white;
+    line-height: 2.2vw;
+}
+/*セクション２*/
+
+
+
+/*セクション３*/
+.third-w{
+    background-color: #fadce1;
+    width: 100%;
+    height: 83vw;
+}
+.tImg-w{
+    position: relative;
+    height: 100%;
+}
+.im1,.im2,.im3,.im4,.im5,.im6,.im7,#chi-video{
+    position: absolute;
+    width: 400px;
+}
+.im2{
+    top: 25%;
+    left: 40%;
+    z-index: 2;
+    width: 30%;
+}
+.im3{
+    top: 9vw;
+    right: 0%;
+    z-index: 1;
+    width: 34vw;
+}
+.im4{
+    top: 42%;
+    left: 68%;
+    z-index: 2;
+    width: 30%;
+}
+.im5{
+    top: 1vw;
+    left: 1%;
+    width: 50%;
+}
+.im6{
+    top: 42%;
+    left: 2%;
+    width: 24%;
+}
+.im7{
+    top: 60%;
+    left: 6%;
+    width: 47%;
+}
+#chi-video{
+    top: 69%;
+    left: 48%;
+    z-index: 1;
+    width: 25vw;
+}
+/*セクション３*/
+
+
+/*セクション４*/
+.kokos-w{
+    width: 100%;
+    height: 127vw;
+}
+.add{
+    position: relative;
+}
+.text-con{
+    width: 96%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.text-con img{
+    width: 50%;
+}
+.quino{
+    top: 10px;
+    left: 48%;
+}
+.tiko{
+    position: absolute;
+    top: 9vw;
+    right: 0%;
+}
+.rebec{
+    position: absolute;
+    top: 50vw;
+    left: 1%;   
+}
+.block1{
+    top: 10vw;
+    left: 40vw;
+    position: absolute;
+    font-family: serif;
+    line-height: 2vw;
+    width: 50%;
+    height: 22vw;
+    background-color: #fadce1;
+    color: black;
+    padding: 0 4vw;
+}
+.block2 {
+    position: absolute;
+    top: 19vw;
+    font-family: serif;
+    left: 8%;
+    line-height: 2vw;
+    width: 50%;
+    height: 22vw;
+    background-color: #fadce1;
+    color: black;
+    padding: 0 4vw;
+}
+.block3{
+    position: absolute;
+    top: 66.4vw;
+    left: 42%;
+    font-family: serif;
+    line-height: 2vw;
+    text-align: left;
+    width: 50%;
+    height: 22vw;
+    background-color: #fadce1;
+    color: black;
+    padding: 0 4vw;
+}
+.block1 p,.block2 p,.block3 p{
+    font-size: 1.2vw;
+}
+.block1 h1,.block2 h1,.block3 h1{
+    font-size: 2.0vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.number1{
+
+    z-index: 3;
+    font-family: 'Lobster', cursive;
+    top: 20px;
+    left: 40%;
+    font-size: 6vw;
+    color: rgb(255, 60, 167);
+}
+.number2{
+    position: absolute;
+    z-index: 3;
+    font-family: 'Lobster', cursive;
+    top: 1vw;
+    left: 41%;
+    font-size: 6vw;
+    color: rgb(255, 60, 167);
+}
+.number3{
+    position: absolute;
+    font-family: 'Lobster', cursive;
+    z-index: 3;
+    top: 33vw;
+    left: 1%;
+    font-size: 6vw;
+    color: rgb(255, 60, 167);
+}
+/*セクション４*/
+
+
+
+
+
+/*セクション５*/
+.fou-w{
+    width: 100%;
+    height: 55vw;
+    background-color: #fadce1;
+}
+.fou2{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.fou2 h2{
+    position: absolute;
+    color: rgb(100, 93, 95);
+    font-size: 2vw;
+    font-family: 'Lobster', cursive;
+    top: 3vw;
+    left: 50%;
+}
+.fou2 h1{
+    position: absolute;
+    font-family: 'Lobster', cursive;
+    font-size: 5vw;
+    letter-spacing: 0.5vw;
+    color: black;
+    top: 26vw;
+    left: -12%;
+    transform: rotate(90deg);
+}
+.table{
+    position: absolute;
+    top: 14vw;
+    width: 62%;
+    left: 26%;
+}
+.fa{
+    margin-right: 1vw;
+}
+.table p {
+    color: black;
+    font-size: 1.3vw;
+    line-height: 7vw;
+    letter-spacing: 0.4vw;
+    border-bottom: 1px solid rgb(201, 146, 223);
+    border-top: 1px solid rgb(201, 146, 223);
+}
+.fa-facebook::before{
+    font-size: 2vw;
+}
+.fa-twitter::before{
+    font-size: 2vw;
+}
+.fa-instagram::before{
+    font-size: 2vw;
+}
+.fa-youtube::before{
+    font-size: 2vw;
+}
+/*セクション５*/
+
+
+
+/*セクション６*/
+.fif-w {
+    width: 100%;
+    height: 190vw;
+}
+.fif-con{
+    margin: 0 auto;
+    width: 90%;
+}
+.one{
+    width:100%;              /*横幅いっぱいにwidthを指定*/
+    padding-bottom: 56.25%;  /*高さをpaddingで指定(16:9)*/
+    height:0px;           /*高さはpaddingで指定するためheightは0に*/
+    margin-bottom: 10vw;
+    position: relative;
+}
+.v-one {
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 15vw;
+    width: 60vw;
+    height: 32vw;
+}
+.p-one {
+    font-family: 'Lobster', cursive;
+    margin-top: 0vw;
+    position: absolute;
+    font-size: 10vw;
+    top: 43vw;
+    left: 18vw;
+    letter-spacing: 0.4vw;
+    color: #ff1ec7;
+}
+.p-two{
+    font-family: 'Lobster', cursive;
+    font-size: 9vw;
+    letter-spacing: 0.2vw;
+    z-index: 3;
+    top: 45vw;
+    left: 10vw;
+    position: absolute;
+    color: #ff1ec7;
+}
+.p-three{
+    position: absolute;
+    left: 21vw;
+    top: 45vw;
+    white-space: nowrap;
+    font-family: 'Lobster', cursive;
+    font-size: 10vw;
+    color: #ff1ec7;
+}
+
+/*セクション６*/
+
+
+/*セクション７*/
+.contact-w{
+    width:100%;
+    height: 55vw;
+    background-color: #fadce1;
+}
+
+.contact-con{
+    width: 90%;
+    margin: 0 auto;
+}
+.main-con{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.contact-con h1{
+    font-size: 5vw;
+    padding-top: 2vw;
+    margin-bottom: 5vw;
+    font-family: 'Lobster', cursive;
+}
+.main-button{
+    width: 40%;
+    height: 25vw;
+    background-color: #fadce1;
+    position: relative;
+    border: none;
+}
+.con-p{
+    position: absolute;
+    font-size: 2vw;
+    left: 13vw;
+    top: 11vw;
+}
+.contact-con img{
+    width: 38vw;
+}
+.con-right{
+    width: 45%;
+    height: 100%;
+}
+
+input{
+    background-color: #fadce1;
+    border: none;
+    margin-top: 2vw;
+    font-size: 1vw;
+    width: 45%;
+    border-bottom: 2px solid palevioletred;
+    margin-right: 1vw;
+    margin-bottom: 3vw;
+}
+textarea{
+    width: 95%;
+    background-color: #fadce1;
+    border: none;
+    font-size: 1vw;
+    height: 11vw;
+    border-bottom: 2px solid palevioletred;
+}
+.con-right button{
+    width: 30%;
+    outline: none;
+    height: 4vw;
+    margin-top: 4vw;
+    border: 2px solid palevioletred;
+}
+.submit {
+    background-color: #fadce1;
+    cursor: pointer;
+    margin-left: 30%;
+    border-radius: 4px;
+    color: #130F40;
+    font-size: 1.4vw;
+    font-weight: bold;
+    box-shadow: 0 1vw #a5045d;
+}
+
+.submit:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+
+footer{
+    color:black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.w_in{
+    margin-top: 30px;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.set{
+    text-align: center;
+}
+.set-in{
+    color: white;
+    margin-top: 20px;
+    font-size: 12px;
+}
+/*セクション７*/
+
+
+
+
+
+
+
+
+footer{
+    color:palevioletred;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+li{
+    color: pink;
+}
+a{
+    color: #fadce1;
+    font-size: 1.4vw;
+}
+.w_in{
+    margin-top: 2vw;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.logo h3{
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+.set{
+    text-align: center;
+}
+.set-in{
+    color: white;
+    margin-top: 4vw;
+    font-size: 0.8vw;
+}
+#nav-drawer{
+    display: none;
+}
+
+
+
+
+
+
+/*レスポンシブCSS*/
+@media screen and (max-width:480px){
+    .pre,nav{
+        display: none;
+    }
+    header{
+        height: 8vw;
+    }
+    .header-logo img{
+        width: 11vw;
+        margin-top: 1vw;
+    }
+    #nav-drawer{
+        display: block;
+    text-align: right;
+    margin-top: 0.8vw;
+    margin-right: 5vw;
+    right: 0vw;
+    top: 0vw;
+    position: fixed;
+    }
+    #nav-content{
+        text-align: left;
+    }
+    #nav-content a{
+        margin-left: 1vw;
+    }
+    #nav-content button {
+        margin-bottom: 7vw;
+        margin-top: 2vw;
+        width: 24vw;
+        height: 8vw;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+    #nav-open span:before {
+        bottom: -1.8vw;
+    }
+    #nav-open span:after {
+        bottom: -3.8vw;
+    }
+
+
+    .second-w {
+        height: 75vw;
+    }
+    .thema{
+        top: 3vh;
+    }
+    .text-right p {
+        font-size: 12px;
+        line-height: 3.7vw;
+    }
+    .sebas {
+        top: 37vw;
+        left: 5vw;
+        width: 32vw;
+    }
+    .red {
+        width: 32vw;
+    }
+
+
+
+    .text-con{
+        margin-top: 5vw;
+    }
+    .kokos-w {
+        height: 387vw;
+    }
+    .add{
+        position: relative;
+        height: 150vw;
+        margin-bottom: 0vw;
+    }
+    .add img{
+        top: 0%;
+        width: 100%;
+        left: 0;
+        right: unset;
+    }
+    .add>p{
+        top: -6vw;
+    /* right: 0; */
+        left: unset;
+    }
+
+    .add>div{
+        top: 65vw;
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+        text-align: left;
+        width: 90%;
+        height: 50vw;
+        margin: 0;
+        padding: 0;
+    }
+    .add>div h1,.add>div p{
+        margin: 2vw 4vw;
+    line-height: 5vw;
+    }
+
+    .addren{
+        top: -25vw;
+    }
+    .addadd{
+        top: -47vw;
+    }
+
+    .block1 p, .block2 p, .block3 p {
+        font-size: 11px;
+    }
+    .block3{
+        top: 23vw;
+    }
+    .fou-w {
+        height: 85vw;
+    }
+    .table {
+        top: 16vw;
+        width: 65vw;
+        left: 23vw;
+    }
+    .fou2 h1 {
+        top: 38vw;
+        left: -12%;
+    }
+    .table p {
+        font-size: 13px;
+        line-height: 6vw;
+    }
+    .contact-w {
+        height: 70vw;
+    }
+    .contact-con img {
+        width: 40vw;
+    }
+    .con-p {
+        font-size: 16px;
+        left: 0vw;
+        top: 33vw;
+    }
+    input{
+        width: 38vw;
+        margin-top: 0;
+        font-size: 12px;
+    }
+    textarea {
+        font-size: 10px;
+    }
+    .con-right button {
+        height: 5vw;
+    }
+}
